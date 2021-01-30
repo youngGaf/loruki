@@ -81,6 +81,9 @@ img{
     margin: 20px 0;
 }
 
+.showcase-text{
+    animation: slideinFromLeft 1s ease-in;
+}
 .showcase .grid{
     overflow: visible;
     grid-template-columns: 55% 45%;
@@ -93,6 +96,7 @@ img{
     width: 400px;
     z-index: 100;
     justify-self: center;
+    animation: slideinFromRight 1s ease-in;
 }
 .showcase .form-control{
     margin: 30px 0;
@@ -126,6 +130,7 @@ img{
 /* Stats */
  .stats{
      padding-top: 100px;
+     animation: slideinFromBottom 1s ease-in;
  }
 
 .stats-heading{
@@ -231,7 +236,41 @@ code, pre{
     margin: 0 10px;
 }
 
+/* Animations */
+@keyframes slideinFromLeft{
+    0% {
+        transform: translateX(-100%);
+    }
 
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideinFromRight{
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideinFromTop{
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideinFromBottom{
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 
 
 
@@ -256,10 +295,12 @@ code, pre{
     .showcase-text{
         text-align: center;
         margin-top: 40px;
+        animation: slideinFromTop 1s ease-in;
     }
     .showcase-form{
         justify-self: center;
         margin: auto;
+        animation: slideinFromBottom 1s ease-in;
     }
     .cli .grid > *:first-child{
         grid-column: 1;
