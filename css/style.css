@@ -331,6 +331,19 @@ code, pre{
 
 /* Mobile */
 @media(max-width: 500px){
+    p{
+        width: fit-content;
+        padding: 0px 40px;
+    }
+    .showcase{
+
+        background-color: var(--primary-color);
+        color: #fff;
+    }
+    .showcase-form {
+        height: 350px;
+        width: auto;
+    }
     .navbar {
         height: 110px;
     }
